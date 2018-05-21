@@ -1,0 +1,110 @@
+
+
+
+/* body {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
+} */
+
+img{
+  width: 150px;
+  margin-top: 50px;
+  
+}
+
+.border-bottom-color{
+  color: #64b5f6 !important; 
+}
+
+/* div {
+  width: 350px;
+  border:0px;
+  padding: 5px;
+  margin: 20px;
+} */
+
+.npc {
+  color: #ffffff;
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  /* text-align: right; */
+}
+.cadastro {
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  text-align: right;
+}
+
+  .btn{
+    width: 100%;
+  }
+  .input-field{
+    padding: 10px;
+    margin: 2px;
+  }
+  
+  .botaozao{
+    position: absolute;
+    right: 60px;
+    bottom: 30px;
+    z-index: 5;
+  }
+
+  .formulario {
+    display: block;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    
+  
+  }
+  @media screen and (max-width: 1000px){
+    .formulario {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 800px){
+    .formulario {
+      width: 80%;
+    }
+    body {
+      margin: 2;
+  
+    }
+  }
+  
+  @media screen and (max-width: 1000px){
+    .formulario {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 650px){
+    .formulario {
+      width: 80%;
+    }
+        .botaozao {
+          left: 50%;
+          transform: translateX(-50%);
+          /* border: 2px solid greenyellow; */
+        }
+  }
+  
+  @media screen and (max-width: 400px){
+    .formulario {
+      width: 90%;
+    }
+    body {
+      margin: 0;
+  
+    }
+  
+  }

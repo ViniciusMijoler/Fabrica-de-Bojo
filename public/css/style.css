@@ -1,0 +1,70 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body {
+
+
+}
+
+/* texto da navbar responsiva */
+nav ul a,
+nav .brand-logo {
+  color: #ffffff;
+  font-family: 'Cutive Mono', monospace;
+  
+}
+
+/* espaçamento do texto */
+p {
+  color: #ffffff;
+  line-height: 2rem;
+}
+
+/* cor do menu sanduiche responsivo */
+.button-collapse {
+  color:  #ffffff
+}
+
+.parallax-container {
+  min-height: 500px; /*altura das imagens */
+  line-height: 0;
+  height: auto;
+  font-family: 'Poiret One', cursive;
+  
+  color: #ffffff; /* cor do subtítulo da página*/
+}
+  .parallax-container .section { /*responsividade do texto dos containers */
+    width: 100%;
+  }
+
+@media only screen and (max-width : 50px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 50%;
+  }
+  #index-banner .section {
+    top: 50%;
+  }
+}
+
+@media only screen and (max-width : 100px) {
+  #index-banner .section {
+    top: 20;
+  }
+}
+
+.icon-block {
+  padding: 100 100px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 100;
+}

@@ -1,0 +1,58 @@
+<div class="text">
+    <br>
+    <br>
+    <center>
+        <h10>Pedido</h10>
+        <h20>
+            <br> Cadastre os pedidos
+        </h20>
+    </center>
+</div>
+<br>
+<br>
+<div class="content" ng-init="init()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="row">
+                <form class="formulario" name="userForm">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="num_pedido" class="active">Numero</label>
+                            <input id="num_pedido" ng-model="pedido.num_pedido" 
+                                type="number" class="validate" required/>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="dt_pedido" class="active">Data</label>
+                            <input id="dt_pedido" ng-model="pedido.dt_pedido" type="date" class="validate" 
+                                ng-blur="validarStyleDate()" ng-style="styleDate" ng-min="dt_pedido_min" required/>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="produto" class="active">Produto</label>
+                            <input id="produto" name="produto" ng-model="pedido.produto" style="color: black"
+                                type="text" class="validate" disabled> 
+                        </div>
+                        <div class="col s12">
+                            <label class="active">Cor</label>
+                            <select id="cor" class="browser-default" ng-model="pedido.cor" 
+                                ng-blur="validarStyleSelect()" ng-style="styleSelect">
+                                <option ng-repeat="cor in cores" value="{{cor.name}}">{{cor.name}}</option>
+                            </select>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="quantidade" class="active">Quantidade</label>
+                            <input id="quantidade" ng-model="pedido.quantidade" min="1"
+                                type="number" class="validate" required/>
+                        </div>
+                    </div>                    
+
+                    <a href="/pedidos" class="btn-floating waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+
+                    <button class="btn waves-effect waves-light pull-right col s3" ng-disabled="userForm.$invalid" 
+                        ng-click="cadPedido()">Salvar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

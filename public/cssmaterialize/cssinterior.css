@@ -1,0 +1,129 @@
+body{
+  margin-top: 40px;
+}
+
+
+img {
+  width: 108px;}
+
+/* .border-bottom-color{
+  color: #64b5f6 !important; 
+} */
+
+.card{
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+  .tabela{
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+  }
+  .text{
+    top: 50px;
+  }
+  h10 {
+
+    color: #3d5afe;
+    line-height: 1.5;
+    font-size: 30px;
+    letter-spacing: 0.8px;
+    margin-top: 50px !important;
+    margin-bottom: 10px;
+    font-family: 'Muli', Arial, sans-serif; 
+      }
+
+  h20 {
+    color: #444444;
+    line-height: 1.5;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 10px;
+    font-family: 'Muli', Arial, sans-serif; 
+      }
+      
+  h15 {
+    color: #3d5afe;
+    line-height: 1.5;
+    font-size: 30px;
+    letter-spacing: 0.8px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 10px;
+    font-family: 'Muli', Arial, sans-serif; 
+      }
+
+  .btn{
+    width: 330px;
+  }
+  .input-field{
+    padding: 5px;
+    margin: 2px;
+  }
+ 
+  .botaozao{
+    position: absolute;
+    left: 950px;
+    bottom: 0px;
+    z-index: 5;
+  }
+
+  .formulario {
+    display: block;
+    top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    
+
+
+  }
+  @media screen and (max-width: 1000px){
+    .formulario {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 800px){
+    .formulario {
+      width: 80%;
+    }
+    body {
+      margin: 2;
+  
+    }
+  }
+  
+  @media screen and (max-width: 1000px){
+    .formulario {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 650px){
+    .formulario {
+      width: 80%;
+    }
+        .botaozao {
+          left: 50%;
+          transform: translateX(-50%);
+          /* border: 2px solid greenyellow; */
+        }
+  }
+  
+  @media screen and (max-width: 400px){
+    .formulario {
+      width: 90%;
+    }
+    body {
+      margin: 0;
+  
+    }
+  
+  }

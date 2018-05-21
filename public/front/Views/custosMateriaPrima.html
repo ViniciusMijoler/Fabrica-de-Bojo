@@ -1,0 +1,94 @@
+<div class="text" ng-init="init()">
+        <br>
+        <br>
+        <center>
+            <h10>Matéria Prima</h10>
+            <h20>
+                <br> Consulta de gasto com matéria prima
+            </h20>
+        </center>
+    </div>
+    <br>
+    <br>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <table class="centered" class="responsive-table table">
+                        <thead>
+                            <tr>
+                                <th>Matéria Prima</th>
+                                <th>Cor</th>
+                                <th>Quantidade</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-hide="(custos.length > 0)">
+                                <td colspan="4" >Não há gastos</td>
+                            </tr>
+                            <tr ng-show="(custos.length > 0)">
+                               <td>Espuma</td>
+                               <td>-</td>
+                               <td>{{espuma.qtd_espuma}} m</td>
+                               <td>R$ {{espuma.total_espuma}}</td>
+                            </tr>
+                            <tr ng-repeat="custo in custos">
+                                <td>Tecido</td>
+                                <td>
+                                    <svg height="12" width="12">
+                                        <title>{{custo.cor}} </title>
+                                        <circle cx="6" cy="6" r="4" stroke="{{custo.paint_cor}}" stroke-width="3" fill="{{custo.paint_cor}}" />
+                                    </svg> 
+                                </td>
+                                <td>{{custo.tecido}} Kg</td>
+                                <td>R$ {{custo.custo_tecido}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col-md-3">
+                            <i class="material-icons prefix">attach_money</i>
+                            <label class="active">Total Matéria Prima</label>
+                            <input ng-model="total_mp" type="number" style="color: black" disabled>
+                        </div>
+                        <div class="input-field col-md-3">
+                            <i class="material-icons prefix">attach_money</i>
+                            <label class="active">Verba de Marketing</label>
+                            <input ng-model="vb_marketing" type="number" style="color: black" disabled>
+                        </div>
+                        <div class="input-field col-md-3">
+                            <i class="material-icons prefix">attach_money</i>
+                            <label class="active">Custos Mão de Obra</label>
+                            <input ng-model="mao_de_obra" type="number" style="color: black" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col-md-3">
+                            <i class="material-icons prefix">attach_money</i>
+                            <label class="active">Total</label>
+                            <input ng-model="total_custo" type="number" style="color: black" disabled>
+                        </div>
+                        <div class="input-field col-md-3">
+                            <i class="material-icons prefix">attach_money</i>
+                            <label class="active">Custo por produto</label>
+                            <input ng-model="custo_produto" type="number" style="color: black" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <a href="/pedidos" class="btn-floating waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+                </div>
+            </div>
+        </div>
+    </div>

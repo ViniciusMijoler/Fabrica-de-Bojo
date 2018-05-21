@@ -1,0 +1,66 @@
+<div class="text" ng-init="init()">
+    <br>
+    <br>
+    <center>
+        <h10>Pedidos</h10>
+        <h20>
+            <br> Cadastre um pedido
+        </h20>
+    </center>
+</div>
+<br>
+<br>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="tabela">
+                <table table class="centered" class="responsive-table table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Número</th>
+                            <th>Produto</th>
+                            <th>Cor</th>
+                            <th>Quantidade</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-hide="(pedidos.length > 0)">
+                            <td colspan="6" >
+                                Não há pedidos cadastrados
+                            </td>
+                        </tr>
+                        <tr ng-repeat="pedido in pedidos">
+                            <td> {{pedido.str_dt_pedido}} </td>
+                            <td> {{pedido.num_pedido}} </td>
+                            <td> Bojo </td>
+                            <td>
+                                <svg height="12" width="12">
+                                    <title>{{pedido.cor}} </title>
+                                    <circle cx="6" cy="6" r="4" stroke="{{pedido.paint_cor}}" stroke-width="3" fill="{{pedido.paint_cor}}" />
+                                </svg> 
+                            </td>
+                            <td> {{pedido.quantidade}} </td>
+                            <td style="padding-top: 0px; padding-bottom: 0px"> 
+                                <a class="btn-floating waves-effect waves-light red darken-1" ng-click="excluirPedido(pedido.id_pedido)">
+                                    <i class="material-icons">close</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8 push-s2">
+                <a href="/" class="btn-floating waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+                
+                <a href="/custosMateriaPrima" class="btn waves-effect waves-light pull-right col s3" 
+                    style="margin-left: 1%">Materias Primas</a>
+
+                <a href="/cadastrarPedido" class="btn waves-effect waves-light pull-right col s2">Novo</a>
+            </div>
+        </div>
+    </div>
+</div>
